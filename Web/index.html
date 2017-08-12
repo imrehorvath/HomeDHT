@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WebDHT</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <div class="container">
+    <div class="starter-template">
+      <h1>WebDHT</h1>
+      <p class="lead">
+        Measure and display the temperature, relative humidity and the head index.
+      </p>
+
+      <div class="row">
+
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Temperature</h3>
+            </div>
+            <div class="panel-body">
+              <p>
+                <span id="celsius"></span>
+                <span> °C</span>
+              </p>
+              <p>
+                <span id="farenheit"></span>
+                <span> °F</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Humidity</h3>
+            </div>
+            <div class="panel-body">
+              <p>
+                <span id="humidity"></span>
+                <span> %</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Heat Index</h3>
+            </div>
+            <div class="panel-body">
+              <p>
+                <span id="hic"></span>
+                <span> °C</span>
+              </p>
+              <p>
+                <span id="hif"></span>
+                <span> °F</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="footer">
+        <p>© Imre Horvath 2017</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    (function poll() {
+      $.getJSON('/arduino/readsensor', (data) => {
+        if (data.success) {
+          $('#celsius').text(data.celsius)
+          $('#farenheit').text(data.farenheit)
+          $('#humidity').text(data.humidity)
+          $('#hic').text(data.hic)
+          $('#hif').text(data.hif)
+          setTimeout(poll, 5000)
+        }
+      })
+    })()
+  </script>
+</body>
+
+</html>
