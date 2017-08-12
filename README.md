@@ -27,11 +27,11 @@ You need a DHT22 sensor, a 10k pull up resistor, wires, solder, connector pins a
 1. If the SD card is not setup yet, you may want to read this description first.
 [Extending the disk space on your Yún](https://github.com/imrehorvath/ArduinoYun#extending-the-disk-space)
 
-2. Copy the content under [Web/](Web) to `/mnt/sda1/arduino/www/WebDHT/` on your Yún.
+2. Copy the content under [Web/](Web) to `/mnt/sda1/arduino/www/HomeDHT/` on your Yún.
 
 ## Usage
 
-You can navigate to http://arduino.local/sd/WebDHT/ to see the readings on your local network with your smartphone, tablet or desktop computer.
+You can navigate to http://arduino.local/sd/HomeDHT/ to see the readings on your local network with your smartphone, tablet or desktop computer.
 
 ![HomeDHT sensor readings screenshot](HomeDHT.png "HomeDHT sensor readings screenshot")
 
