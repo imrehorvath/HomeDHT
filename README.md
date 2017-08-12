@@ -33,4 +33,6 @@ You need a DHT22 sensor, a 10k pull up resistor, wires, solder, connector pins a
 
 You can navigate to http://arduino.local/sd/WebDHT/ to see the readings on your local network with your smartphone, tablet or desktop computer.
 
+![alt text](HomeDHT.png "HomeDHT sensor readings")
+
 (c) Imre Horvath 2017
