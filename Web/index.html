@@ -23,70 +23,63 @@
   <script src="js/bootstrap.min.js"></script>
 
   <div class="container">
-    <div class="starter-template">
-      <h1>HomeDHT</h1>
-      <p class="lead">
-        Measure and display the temperature, relative humidity and the heat index.
-      </p>
+    <h1>HomeDHT</h1>
+    <p class="lead">
+      Measure and display the temperature, relative humidity and the heat index.
+    </p>
 
-      <div class="row">
+    <div class="row">
 
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Temperature</h3>
-            </div>
-            <div class="panel-body">
-              <p>
-                <span id="celsius"></span>
-                <span> °C</span>
-              </p>
-              <p>
-                <span id="farenheit"></span>
-                <span> °F</span>
-              </p>
-            </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Temperature</h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <span id="celsius"></span> °C
+            </p>
+            <p>
+              <span id="farenheit"></span> °F
+            </p>
           </div>
         </div>
-
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Humidity</h3>
-            </div>
-            <div class="panel-body">
-              <p>
-                <span id="humidity"></span>
-                <span> %</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Heat Index</h3>
-            </div>
-            <div class="panel-body">
-              <p>
-                <span id="hic"></span>
-                <span> °C</span>
-              </p>
-              <p>
-                <span id="hif"></span>
-                <span> °F</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <footer class="footer">
-        <p>© Imre Horvath 2017</p>
-      </footer>
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Humidity</h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <span id="humidity"></span> %
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Heat Index</h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <span id="hic"></span> °C
+            </p>
+            <p>
+              <span id="hif"></span> °F
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <footer class="footer">
+      <p>© Imre Horvath 2017</p>
+    </footer>
   </div>
 
   <script>
